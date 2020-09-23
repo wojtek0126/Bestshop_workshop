@@ -1,0 +1,115 @@
+@mixin statisticContainer {
+  max-width: 800px;
+  margin: 100px auto 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin scaleUpForMobile {
+  transform: scale(1.5, 1.5);
+}
+
+
+.statistics {
+  margin-top: 100px;
+}
+
+.statistics__title {
+  text-align: center;
+}
+
+.statistics__container {
+  @include statisticContainer;
+}
+
+.statistics__single {
+  max-width: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  font-family: $font-raleway;
+}
+
+.statistics__circle {
+  border-radius: 50%;
+  width: 63px;
+  height: 63px;
+  position: relative;
+}
+
+.statistics__img {
+  position: absolute;
+}
+
+.statistics__single:nth-child(1) .statistics__circle {
+  background-color: $color-redish;
+}
+
+.statistics__single:nth-child(1) .statistics__img {
+  top: 0;
+  left: 45%;
+}
+
+.statistics__single:nth-child(2) .statistics__circle {
+  background-color: $color-primary;
+}
+
+.statistics__single:nth-child(2) .statistics__img {
+  top: 14px;
+  left: 47%;
+}
+
+.statistics__single:nth-child(3) .statistics__circle {
+  background-color: $color-green;
+}
+
+.statistics__single:nth-child(3) .statistics__img {
+  top: 6px;
+  left: 50%;
+}
+
+.statistics__number {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.1875rem;
+  margin-top: 13px;
+}
+
+.statistics__description {
+  color: $color-grey;
+  margin-top: 19px;
+}
+
+@media (min width: 601px) and (max-width: 720px) {
+  .statistics__title {
+    display: flex;
+    padding: 0 10px 0 10px;
+    width: 700px;
+  }
+
+  .statistics__container {
+    transform: translate(-55px, 0px) scale(0.8);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0px 50px 0 0px;
+  }
+}
+@media (max-width: 600px) {
+   .statistics__container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+     align-items: center;
+  }
+}
+//gap between elements done below
+.statistics__single {
+  margin: 60px;
+  transform: scale(1.5);
+}
+
+
+

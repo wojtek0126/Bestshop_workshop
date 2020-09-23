@@ -1,0 +1,58 @@
+
+
+.return-to-top-icon {
+  position: sticky;
+  top: 97%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: $color-black;
+  z-index: 10;
+  color: white;
+  font-size: 40px;
+  font-weight: 1000;
+  opacity: 0.2;
+  position: fixed;
+
+
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    opacity: 1;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .return-to-top-icon {
+    top: 97%;
+    left: 40%;
+    border-bottom: 20px solid white;
+    transition: 1s;
+    & a {
+      padding-top: -15px;
+    }
+  }
+
+  .buttonpressed {
+    //transform: translateY(-14.7vh);
+    animation: moveback 0.5s 0.1s 1 alternate;
+  }
+
+  @keyframes  moveback {
+    50% {
+      transform: translateY(-14.7vh);
+    }
+    //
+    //70% {
+    //  transform: translateY(-15.7hv);;
+    //}
+    //100% {
+    //  transform: translateY(-14.7hv);;
+    }
+    }
+
